@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
-    <title>GSB</title>
+    <title>EVAL</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {!! Html::style('assets/css/bootstrap.css') !!}
@@ -21,26 +21,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar+ bvn"></span>
                 </button>
-                <a class="navbar-brand" href="{{url('/')}}">GSB Frais</a>
+                <a class="navbar-brand" href="{{url('/')}}">Marouane BOUZIDA</a>
             </div>
-            @if (Session::get('id')==0)
-                <div class="collapse navbar-collapse" id="navbar-collapse-target">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{{url('/getLogin')}}" data-toggle="collapse" data-target=".navbar-collapse.in">Se connecter</a></li>
-                    </ul>
-                </div>
-            @endif
-            @if (Session::get('id')>0)
-                <div class="collapse navbar-collapse" id="navbar-collapse-target">
-                    <ul class="nav navbar-nav">
-                        <li><a href="{{url('/getListeFrais')}}" data-toggle="collapse" data-target=".navbar-collapse.in">Lister</a></li>
-                        <li><a href="{{url('/ajouterFrais')}}" data-toggle="collapse" data-target=".navbar-collapse.in">Ajouter</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{{url('/getLogout')}}" data-toggle="collapse" data-target=".navbar-collapse.in">Se déconnecter</a></li>
-                    </ul>
-                </div>
-            @endif
+            <div class="collapse navbar-collapse" id="navbar-collapse-target">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{url('/listerMembres')}}" data-toggle="collapse" data-target=".navbar-collapse.in">Lister Membres</a></li>
+                    <li><a href="{{url('/listerCours')}}" data-toggle="collapse" data-target=".navbar-collapse.in">Lister Cours</a></li>
+                    <li><a href="{{url('/listerInscriptions')}}" data-toggle="collapse" data-target=".navbar-collapse.in">Lister Inscription</a></li>
+                    <li><a href="{{url('/ajouterMembres')}}" data-toggle="collapse" data-target=".navbar-collapse.in">Ajouter Membres</a></li>
+                </ul>
+            </div>
         </div><!--/.container-fluid -->
     </nav>
 </div>
